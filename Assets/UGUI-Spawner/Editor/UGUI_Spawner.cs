@@ -24,7 +24,7 @@ namespace Wesley4121
 
         private void OnGUI()
         {
-            EditorGUILayout.BeginHorizontal(GUILayout.ExpandWidth(false), GUILayout.ExpandHeight(false));
+            EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Canvas", GUILayout.Width(_width), GUILayout.Height(_hight), GUILayout.ExpandWidth(false)))
             {
                 var go = new GameObject("Canvas_", typeof(RectTransform));
@@ -128,25 +128,12 @@ namespace Wesley4121
 
             // ============================================================================================================================
 
-            EditorGUILayout.BeginHorizontal(GUILayout.ExpandWidth(false));
+            EditorGUILayout.BeginHorizontal();
 
 
 
 
-            // if (GUILayout.Button("TMP", GUILayout.Width(_width), GUILayout.Height(_hight)))
-            // {
-            //     var go = new GameObject("TMPText_", typeof(RectTransform));
-            //     GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
-            //     var tmp = go.AddComponent<TextMeshProUGUI>();
-            //     tmp.color = $"#FFE3B8".ToColor();
-            //     tmp.text = "default";
-
-            //     tmp.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(
-            //         "Assets/6.Front/FrontType/TMPType/fusion-pixel-monospaced SDF_tw.asset");
-            //     Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
-            //     Selection.activeGameObject = go;
-            // }
 
             if (GUILayout.Button("VLayout", GUILayout.Width(_width), GUILayout.Height(_hight)))
             {
@@ -223,7 +210,7 @@ namespace Wesley4121
             EditorGUILayout.EndHorizontal();
 
 
-            EditorGUILayout.BeginHorizontal(GUILayout.ExpandWidth(false));
+            EditorGUILayout.BeginHorizontal();
 
             if (GUILayout.Button("Button", GUILayout.Width(_width), GUILayout.Height(_hight)))
             {
@@ -250,6 +237,20 @@ namespace Wesley4121
                 GameObjectUtility.SetParentAndAlign(Btntext, go);
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
+                Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
+                Selection.activeGameObject = go;
+            }
+
+            if (GUILayout.Button("TMP", GUILayout.Width(_width), GUILayout.Height(_hight)))
+            {
+                var go = new GameObject("Text_", typeof(RectTransform));
+                GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
+
+                var tmp = go.AddComponent<TextMeshProUGUI>();
+                tmp.text = "default";
+
+                tmp.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(
+                    "Assets/6.Front/FrontType/TMPType/fusion-pixel-monospaced SDF_tw.asset");
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
                 Selection.activeGameObject = go;
             }
