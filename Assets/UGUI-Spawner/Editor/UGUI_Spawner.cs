@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEditor;
+using TMPro;
+
+
 #endif
 namespace Wesley4121
 {
@@ -250,7 +253,39 @@ namespace Wesley4121
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
                 Selection.activeGameObject = go;
             }
+
+            if (GUILayout.Button("TMPBtn", GUILayout.Width(_width), GUILayout.Height(_hight)))
+            {
+
+
+                var go = new GameObject("Button_", typeof(RectTransform));
+                var gort = go.GetComponent<RectTransform>();
+                gort.sizeDelta = new Vector2(160, 30);
+                var image = go.AddComponent<Image>();
+                image.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Resources/unity_builtin_extra/UISprite");
+                var btn = go.AddComponent<Button>();
+                btn.targetGraphic = image;
+                var Btntext = new GameObject("BtnText_");
+                var text = Btntext.AddComponent<TextMeshProUGUI>();
+                var textrt = go.GetComponent<RectTransform>();
+                textrt.sizeDelta = new Vector2(160, 30);
+                text.text = "BtnText";
+                text.fontSize = 30;
+                text.color = Color.black;
+                text.alignment = TextAlignmentOptions.Center;
+
+                GameObjectUtility.SetParentAndAlign(Btntext, go);
+                GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
+
+                Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
+                Selection.activeGameObject = go;
+            }
+
             EditorGUILayout.EndHorizontal();
+
+
+
+
 
 
         }
