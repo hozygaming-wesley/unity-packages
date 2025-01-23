@@ -49,11 +49,11 @@ namespace Wesley4121
                 Selection.activeObject = go;
             }
 
-            if (GUILayout.Button("GO", GUILayout.Width(_width), GUILayout.Height(_hight)))
+            if (GUILayout.Button("Group", GUILayout.Width(_width), GUILayout.Height(_hight)))
             {
                 bool? hasit = Selection.activeGameObject?.TryGetComponent(out RectTransform rect);
                 Type type = hasit.HasValue ? typeof(RectTransform) : typeof(Transform);
-                var go = new GameObject("GameObject_", type ?? typeof(Transform));
+                var go = new GameObject("Group_", type ?? typeof(Transform));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
