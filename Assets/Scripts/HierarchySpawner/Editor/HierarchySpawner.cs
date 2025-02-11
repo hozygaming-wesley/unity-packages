@@ -252,6 +252,12 @@ namespace Tools
                 var go = new GameObject("Text_", typeof(RectTransform));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
                 var tmp = go.AddComponent<TextMeshProUGUI>();
+                tmp.raycastTarget = false;
+                tmp.richText = false;
+                tmp.maskable = true;
+                tmp.parseCtrlCharacters = true;
+                tmp.emojiFallbackSupport = false;
+                tmp.overflowMode = TextOverflowModes.Truncate;
                 tmp.text = "default";
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
                 Selection.activeGameObject = go;
