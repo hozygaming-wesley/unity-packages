@@ -49,7 +49,7 @@ namespace Tools
                 gocv.pixelPerfect = true;
                 //CanvasScaler設定
                 gocvs.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-                gocvs.referenceResolution = new Vector2(1920, 1080);
+                gocvs.referenceResolution = new Vector2(1280, 720);
                 gocvs.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
 
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
