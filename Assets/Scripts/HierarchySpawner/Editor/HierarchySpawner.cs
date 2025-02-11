@@ -14,14 +14,19 @@ namespace Tools
     {
         const int _width = 57;
         const int _hight = 25;
-        const string _uguiPrefabPath = "Assets/HierarchySpawner/Prefab/UGUI/";
-        const string _spritePrefabPath = "Assets/HierarchySpawner/Prefab/Sprite/";
+        const string _uguiPrefab_AssetsPath = "Assets/Scripts/HierarchySpawner/Prefab/UGUI/";
+        const string _uguiPrefab_PackagePath = "Packages/com.wesley4121.tools/Prefab/UGUI/";
+        const string _spritePrefab_AssetsPath = "Assets/Scripts/HierarchySpawner/Prefab/Sprite/";
+        const string _spritePrefab_PackagePath = "Packages/com.wesley4121.tools/Prefab/Sprite/";
+        static private bool isPackage = true;
         [MenuItem("Tools/HierarchySpawner")]
         static void Init()
         {
             var inspWndType = typeof(SceneView);
             var window = GetWindow<HierarchySpawner>("HierarchySpawner", inspWndType);
             window.Show();
+            isPackage = AssetDatabase.IsValidFolder("Packages/com.wesley4121.tools");
+
         }
 
         private void OnGUI()
@@ -96,8 +101,6 @@ namespace Tools
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
                 UnityEngine.UI.Text text = go.AddComponent<UnityEngine.UI.Text>();
                 text.rectTransform.sizeDelta = new Vector2(100, 100);
-                // text.font = AssetDatabase.LoadAssetAtPath<Font>(
-                //     "Assets/6.Front/FrontType/BaseType/fusion-pixel-monospaced.otf");
                 text.text = "default";
                 text.fontSize = 26;
                 text.alignment = TextAnchor.MiddleCenter;
@@ -165,10 +168,11 @@ namespace Tools
 
             if (GUILayout.Button("VSlider", GUILayout.Width(_width), GUILayout.Height(_hight)))
             {
-
-
+                Debug.Log(isPackage);
+                Debug.Log(isPackage ? _uguiPrefab_PackagePath + "VSlider.prefab" : _uguiPrefab_AssetsPath + "VSlider.prefab");
                 var go = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(
-                    "Packages/com.wesley4121.tool/Prefab/VSlider.prefab"));
+                    isPackage ? _uguiPrefab_PackagePath + "VSlider.prefab" : _uguiPrefab_AssetsPath + "VSlider.prefab"
+                ));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
 
@@ -181,7 +185,8 @@ namespace Tools
 
 
                 var go = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(
-                    "Packages/com.wesley4121.tool/Prefab/HSlider.prefab"));
+                    isPackage ? _uguiPrefab_PackagePath + "HSlider.prefab" : _uguiPrefab_AssetsPath + "HSlider.prefab"
+                ));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
@@ -192,7 +197,8 @@ namespace Tools
 
 
                 var go = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(
-                    "Packages/com.wesley4121.tool/Prefab/VScrollRect.prefab"));
+                    isPackage ? _uguiPrefab_PackagePath + "VScrollRect.prefab" : _uguiPrefab_AssetsPath + "VScrollRect.prefab"
+                ));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
@@ -203,7 +209,8 @@ namespace Tools
 
 
                 var go = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(
-                    "Packages/com.wesley4121.tool/Prefab/HScrollRect.prefab"));
+                    isPackage ? _uguiPrefab_PackagePath + "HScrollRect.prefab" : _uguiPrefab_AssetsPath + "HScrollRect.prefab"
+                ));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
 
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
@@ -218,13 +225,10 @@ namespace Tools
             {
 
 
-                // var go = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(
-                //   "Assets/Plugins/0.Wesley/Prefab/Button.prefab"));
                 var go = new GameObject("Button_", typeof(RectTransform));
                 var gort = go.GetComponent<RectTransform>();
                 gort.sizeDelta = new Vector2(160, 30);
                 var image = go.AddComponent<Image>();
-                image.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Resources/unity_builtin_extra/UISprite");
                 var btn = go.AddComponent<Button>();
                 btn.targetGraphic = image;
                 var Btntext = new GameObject("BtnText_");
@@ -247,12 +251,8 @@ namespace Tools
             {
                 var go = new GameObject("Text_", typeof(RectTransform));
                 GameObjectUtility.SetParentAndAlign(go, Selection.activeGameObject);
-
                 var tmp = go.AddComponent<TextMeshProUGUI>();
                 tmp.text = "default";
-
-                tmp.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(
-                    "Assets/6.Front/FrontType/TMPType/fusion-pixel-monospaced SDF_tw.asset");
                 Undo.RegisterCreatedObjectUndo(go, "Create" + go.name);
                 Selection.activeGameObject = go;
             }
@@ -265,7 +265,6 @@ namespace Tools
                 var gort = go.GetComponent<RectTransform>();
                 gort.sizeDelta = new Vector2(160, 30);
                 var image = go.AddComponent<Image>();
-                image.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Resources/unity_builtin_extra/UISprite");
                 var btn = go.AddComponent<Button>();
                 btn.targetGraphic = image;
                 var Btntext = new GameObject("BtnText_");
@@ -285,10 +284,6 @@ namespace Tools
             }
 
             EditorGUILayout.EndHorizontal();
-
-
-
-
 
 
         }
