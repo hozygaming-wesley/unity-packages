@@ -7,18 +7,20 @@ using TMPro;
 
 
 #endif
-namespace Wesley4121
+namespace Tools
 {
 #if UNITY_EDITOR
-    public class UGUI_Spawner : EditorWindow
+    public class HierarchySpawner : EditorWindow
     {
         const int _width = 57;
         const int _hight = 25;
-        [MenuItem("Wesley4121/UGUI_Spawner")]
+        const string _uguiPrefabPath = "Assets/HierarchySpawner/Prefab/UGUI/";
+        const string _spritePrefabPath = "Assets/HierarchySpawner/Prefab/Sprite/";
+        [MenuItem("Tools/HierarchySpawner")]
         static void Init()
         {
             var inspWndType = typeof(SceneView);
-            var window = GetWindow<UGUI_Spawner>("UGUI_Spawner", inspWndType);
+            var window = GetWindow<HierarchySpawner>("HierarchySpawner", inspWndType);
             window.Show();
         }
 

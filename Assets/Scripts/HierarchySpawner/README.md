@@ -1,3 +1,3 @@
-# unity-ugui-spawner
+# HierarchySpawner
 a tool for me
 - update test
