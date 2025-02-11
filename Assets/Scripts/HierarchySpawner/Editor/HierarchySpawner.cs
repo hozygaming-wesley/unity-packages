@@ -254,8 +254,8 @@ namespace Tools
                 var tmp = go.AddComponent<TextMeshProUGUI>();
                 tmp.raycastTarget = false;
                 tmp.richText = false;
-                tmp.maskable = true;
-                tmp.parseCtrlCharacters = true;
+                tmp.maskable = false;
+                tmp.parseCtrlCharacters = false;
                 tmp.emojiFallbackSupport = false;
                 tmp.overflowMode = TextOverflowModes.Truncate;
                 tmp.text = "default";
