@@ -231,11 +231,11 @@ namespace Tools
                 var image = go.AddComponent<Image>();
                 var btn = go.AddComponent<Button>();
                 btn.targetGraphic = image;
-                var Btntext = new GameObject("BtnText_");
+                var Btntext = new GameObject("Text_");
                 var text = Btntext.AddComponent<Text>();
                 var textrt = go.GetComponent<RectTransform>();
                 textrt.sizeDelta = new Vector2(160, 30);
-                text.text = "BtnText";
+                text.text = "Text";
                 text.fontSize = 30;
                 text.color = Color.black;
                 text.alignment = TextAnchor.MiddleCenter;
@@ -273,11 +273,11 @@ namespace Tools
                 var image = go.AddComponent<Image>();
                 var btn = go.AddComponent<Button>();
                 btn.targetGraphic = image;
-                var Btntext = new GameObject("BtnText_");
+                var Btntext = new GameObject("Text_");
                 var text = Btntext.AddComponent<TextMeshProUGUI>();
                 var textrt = go.GetComponent<RectTransform>();
                 textrt.sizeDelta = new Vector2(160, 30);
-                text.text = "BtnText";
+                text.text = "Text";
                 text.fontSize = 30;
                 text.color = Color.black;
                 text.alignment = TextAlignmentOptions.Center;
