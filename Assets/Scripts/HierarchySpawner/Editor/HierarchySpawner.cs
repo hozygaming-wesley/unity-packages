@@ -256,7 +256,6 @@ namespace Tools
                 tmp.richText = false;
                 tmp.maskable = false;
                 tmp.parseCtrlCharacters = false;
-                tmp.emojiFallbackSupport = false;
                 tmp.alignment = TextAlignmentOptions.Center;
                 tmp.overflowMode = TextOverflowModes.Truncate;
                 tmp.text = "default";
