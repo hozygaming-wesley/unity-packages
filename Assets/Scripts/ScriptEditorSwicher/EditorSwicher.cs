@@ -1,6 +1,6 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using UnityEditorInternal;
 using Unity.CodeEditor;
 using System.Collections.Generic;
 [CreateAssetMenu(fileName = "EditorPathConfig", menuName = "ScriptableObjects/EditorPathConfig", order = 1)]
@@ -68,3 +68,4 @@ public class EditorSwicher : EditorWindow
         // }
     }
 }
+#endif
