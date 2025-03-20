@@ -1,0 +1,4 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Modules/HierarchyKit/Renamer/Editor/HierarchyRenamer.uss?fileID=7433441132597879392&amp;guid=2dfc6347b5c1fe54cb7887aa52e1a75d&amp;type=3#HierarchyRenamer" />
+    <engine:Button text="Button" name="rename" style="height: 412px; width: 432px;" />
+</engine:UXML>

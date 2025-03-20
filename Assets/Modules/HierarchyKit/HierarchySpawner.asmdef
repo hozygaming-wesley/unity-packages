@@ -1,10 +1,12 @@
 {
     "name": "HierarchySpawner",
-    "rootNamespace": "",
+    "rootNamespace": "HierarchySpawner",
     "references": [
         "Unity.TextMeshPro"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
