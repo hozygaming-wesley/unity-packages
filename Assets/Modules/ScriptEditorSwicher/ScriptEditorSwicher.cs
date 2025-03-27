@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using System.Linq;
 using Unity.CodeEditor;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -56,12 +54,6 @@ public class ScriptEditorSwicher : EditorWindow {
             currentScriptEditorLabel.text = $"Current Script Editor: {editorName}";
         });
 
-        // Remove apply button if not used
-        var applyButton = root.Q<Button>("ApplyButton");
-        if (applyButton != null) {
-            applyButton.clicked += () => {
-                Debug.Log("Apply Button Clicked");
-            };
-        }
+
     }
 }
