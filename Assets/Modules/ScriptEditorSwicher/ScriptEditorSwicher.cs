@@ -8,7 +8,7 @@ public class ScriptEditorSwicher : EditorWindow {
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
 
-    [MenuItem("Window/UI Toolkit/ScriptEditorSwicher")]
+    [MenuItem("Tools/ScriptEditorSwicher")]
     public static void ShowExample() {
         ScriptEditorSwicher wnd = GetWindow<ScriptEditorSwicher>();
         wnd.titleContent = new GUIContent("ScriptEditorSwicher");
@@ -31,8 +31,6 @@ public class ScriptEditorSwicher : EditorWindow {
         var currentScriptEditorPath = CodeEditor.CurrentEditorInstallation;
         var currentScriptEditorLabel = root.Q<Label>("CurrentScriptEditor");
 
-
-
         // Determine the editor name based on the current script editor path
         string editorName = foundScriptEditors.FirstOrDefault(pair => currentScriptEditorPath.Contains(pair.Key)).Value ?? "Unknown Editor";
         currentScriptEditorLabel.text = $"Current Script Editor: {editorName}";
@@ -43,7 +41,6 @@ public class ScriptEditorSwicher : EditorWindow {
         dropdown.index = availableEditorsPath.IndexOf(currentScriptEditorPath);
 
         dropdown.RegisterValueChangedCallback(evt => {
-            Debug.Log("Dropdown value changed to: " + evt.newValue);
             // Get event index
             int index = dropdown.index;
             // Set new script editor
@@ -53,7 +50,6 @@ public class ScriptEditorSwicher : EditorWindow {
             editorName = foundScriptEditors.FirstOrDefault(pair => currentScriptEditorPath.Contains(pair.Key)).Value ?? "Unknown Editor";
             currentScriptEditorLabel.text = $"Current Script Editor: {editorName}";
         });
-
 
     }
 }
