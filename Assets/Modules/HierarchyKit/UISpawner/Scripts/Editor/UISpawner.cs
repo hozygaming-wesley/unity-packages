@@ -6,7 +6,7 @@ using UnityEditor.UIElements;
 using System.Collections.Generic;
 using TMPro;
 
-public class HierarchySpawnerUIToolkit : EditorWindow
+public class UISpawner : EditorWindow
 {
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
@@ -19,11 +19,11 @@ public class HierarchySpawnerUIToolkit : EditorWindow
         public GameObject Prefab { get; set; }
     }
 
-    [MenuItem("Tools/HierarchySpawnerUIToolkit")]
+    [MenuItem("Tools/UISpawner")]
     public static void ShowExample()
     {
-        HierarchySpawnerUIToolkit wnd = GetWindow<HierarchySpawnerUIToolkit>();
-        wnd.titleContent = new GUIContent("HierarchySpawnerUIToolkit");
+        UISpawner wnd = GetWindow<UISpawner>();
+        wnd.titleContent = new GUIContent("UISpawner");
     }
 
     private TextField prefixField;

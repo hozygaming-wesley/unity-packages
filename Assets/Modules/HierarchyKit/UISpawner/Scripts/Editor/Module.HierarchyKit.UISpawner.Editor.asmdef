@@ -1,6 +1,6 @@
 {
-    "name": "HierarchySpawner",
-    "rootNamespace": "HierarchySpawner",
+    "name": "Module.HierarchyKit.UISpawner.Editor",
+    "rootNamespace": "Module.HierarchyKit.UISpawner.Editor",
     "references": [
         "Unity.TextMeshPro"
     ],
