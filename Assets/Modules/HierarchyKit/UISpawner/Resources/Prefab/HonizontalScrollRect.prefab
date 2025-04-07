@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8943301433122493316}
   - component: {fileID: 8943301433122493317}
   m_Layer: 5
-  m_Name: HScrollRect
+  m_Name: HonizontalScrollRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

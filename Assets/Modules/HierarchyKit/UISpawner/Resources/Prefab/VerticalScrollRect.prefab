@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1733627691360483142}
   - component: {fileID: 1733627691360483161}
   m_Layer: 5
-  m_Name: VScrollRect
+  m_Name: VerticalScrollRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
