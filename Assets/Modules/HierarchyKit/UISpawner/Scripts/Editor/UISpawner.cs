@@ -214,13 +214,22 @@ public class UISpawner : EditorWindow
 
         var setDefaultPrefabsButton = new UnityEngine.UIElements.Button(() =>
         {
-            string prefabPath = "Assets/Modules/HierarchyKit/UISpawner/Resources/Prefab/";
+            // 使用 Application.dataPath 動態取得 Prefab 資料夾的絕對路徑
+            string prefabPath = Path.Combine(Application.dataPath, "Modules/HierarchyKit/UISpawner/Resources/Prefab/");
+            if (!Directory.Exists(prefabPath))
+            {
+                Debug.LogError($"Prefab directory not found: {prefabPath}");
+                return;
+            }
+
             string[] prefabFiles = Directory.GetFiles(prefabPath, "*.prefab");
 
             prefabItems.Clear();
             foreach (var prefabFile in prefabFiles)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabFile);
+                // 將絕對路徑轉為相對路徑以載入資源
+                string relativePath = "Assets" + prefabFile.Replace(Application.dataPath, "").Replace("\\", "/");
+                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(relativePath);
                 if (prefab != null)
                 {
                     prefabItems.Add(new PrefabItem
