@@ -4,6 +4,7 @@ using UnityEngine.UI; // For UnityEngine.UI.Button
 using UnityEngine.UIElements; // For UnityEngine.UIElements.Button
 using UnityEditor.UIElements;
 using System.Collections.Generic;
+using TMPro;
 
 public class HierarchySpawnerUIToolkit : EditorWindow
 {
@@ -25,12 +26,36 @@ public class HierarchySpawnerUIToolkit : EditorWindow
         wnd.titleContent = new GUIContent("HierarchySpawnerUIToolkit");
     }
 
+    private TextField prefixField;
+    private TextField separatorField;
+    private TextField suffixField;
+
     public void CreateGUI()
     {
         VisualElement root = rootVisualElement;
         VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
         root.Add(labelFromUXML);
 
+        // 獲取命名規則的 TextField
+        prefixField = root.Q<TextField>("Prefix");
+        separatorField = root.Q<TextField>("Separator");
+        suffixField = root.Q<TextField>("Suffix");
+
+        // 調整 TextField 樣式以支持縮小時輸入
+        prefixField.style.minWidth = 50; // 設置最小寬度，確保輸入框始終可見
+        prefixField.style.flexGrow = 1; // 允許彈性擴展
+        prefixField.style.flexShrink = 1; // 允許縮小
+        prefixField.style.overflow = Overflow.Visible; // 啟用滾動條以防止內容被裁剪
+
+        separatorField.style.minWidth = 50;
+        separatorField.style.flexGrow = 1;
+        separatorField.style.flexShrink = 1;
+        separatorField.style.overflow = Overflow.Visible;
+
+        suffixField.style.minWidth = 50;
+        suffixField.style.flexGrow = 1;
+        suffixField.style.flexShrink = 1;
+        suffixField.style.overflow = Overflow.Visible;
 
         // Bind buttons to their respective actions
         BindButton("Canvas", () =>
@@ -66,7 +91,15 @@ public class HierarchySpawnerUIToolkit : EditorWindow
             });
         });
 
-        BindButton("Text", () =>
+        BindButton("Sprite", () =>
+        {
+            CreateGameObject("Sprite", typeof(RectTransform), go =>
+            {
+                go.AddComponent<SpriteRenderer>();
+            });
+        });
+
+        BindButton("Legacy_Text", () =>
         {
             CreateGameObject("Text", typeof(RectTransform), go =>
             {
@@ -78,34 +111,28 @@ public class HierarchySpawnerUIToolkit : EditorWindow
             });
         });
 
-        BindButton("Button", () =>
+        BindButton("TMP_Text", () =>
         {
-            CreateGameObject("Button", typeof(RectTransform), go =>
+            CreateGameObject("Text", typeof(RectTransform), go =>
             {
-                var image = go.AddComponent<UnityEngine.UI.Image>();
-                var button = go.AddComponent<UnityEngine.UI.Button>();
-                button.targetGraphic = image;
+                var text = go.AddComponent<TextMeshProUGUI>();
+                text.text = "Default Text";
+                text.fontSize = 26;
+                text.alignment = TextAlignmentOptions.Center;
 
-                var textGO = new GameObject("Text");
-                var text = textGO.AddComponent<UnityEngine.UI.Text>();
-                text.text = "Button";
-                text.fontSize = 20;
-                text.alignment = TextAnchor.MiddleCenter;
+                if (TMP_Settings.defaultFontAsset != null)
+                {
+                    text.font = TMP_Settings.defaultFontAsset;
+                    text.fontMaterial = TMP_Settings.defaultFontAsset.material;
+                }
+                else
+                {
+                    Debug.LogWarning("TMP_Settings.defaultFontAsset is null. Please assign a default font asset in TMP Settings.");
+                }
+
                 text.color = Color.black;
-
-                textGO.transform.SetParent(go.transform);
             });
         });
-
-        BindButton("VLayout", () =>
-        {
-            CreateGameObject("VLayout", typeof(RectTransform), go =>
-            {
-                go.AddComponent<VerticalLayoutGroup>();
-            });
-        });
-
-
 
         var prefabListView = root.Q<ListView>("PrefabListView");
         var addPrefabButton = root.Q<UnityEngine.UIElements.Button>("AddPrefabButton");
@@ -116,8 +143,17 @@ public class HierarchySpawnerUIToolkit : EditorWindow
         prefabListView.makeItem = () =>
         {
             var container = new VisualElement { style = { flexDirection = FlexDirection.Row } };
-            var button = new UnityEngine.UIElements.Button { style = { width = 100, marginRight = 5 } };
-            var objectField = new ObjectField { objectType = typeof(GameObject), style = { flexGrow = 1 } };
+            var button = new UnityEngine.UIElements.Button { style = { width = 25, marginRight = 5 } };
+            var objectField = new ObjectField
+            {
+                objectType = typeof(GameObject),
+                style =
+                {
+                    flexGrow = 1,
+                    alignItems = Align.Center, // 垂直居中
+                    justifyContent = Justify.Center // 水平居中
+                }
+            };
             container.Add(button);
             container.Add(objectField);
             return container;
@@ -151,7 +187,7 @@ public class HierarchySpawnerUIToolkit : EditorWindow
         // Add item
         addPrefabButton.clicked += () =>
         {
-            prefabItems.Add(new PrefabItem { ButtonText = "Spawn", Prefab = null });
+            prefabItems.Add(new PrefabItem { ButtonText = "+", Prefab = null });
             prefabListView.Rebuild();
         };
 
@@ -165,41 +201,7 @@ public class HierarchySpawnerUIToolkit : EditorWindow
             }
         };
 
-        var treeView = root.Q<TreeView>("HierarchyTreeView");
 
-        // Configure TreeView
-        var treeItems = new List<TreeViewItemData<string>>
-        {
-            new TreeViewItemData<string>(1, "Root", new List<TreeViewItemData<string>>
-            {
-                new TreeViewItemData<string>(2, "Child 1"),
-                new TreeViewItemData<string>(3, "Child 2", new List<TreeViewItemData<string>>
-                {
-                    new TreeViewItemData<string>(4, "Grandchild 1"),
-                    new TreeViewItemData<string>(5, "Grandchild 2")
-                })
-            })
-        };
-
-        treeView.SetRootItems(treeItems);
-        treeView.makeItem = () => new Label();
-        treeView.bindItem = (element, item) =>
-        {
-            if (element is Label label && treeView.GetItemDataForId<string>((int)item) is string treeItemData)
-            {
-                label.text = treeItemData;
-            }
-        };
-        treeView.selectionChanged += selectedItems =>
-        {
-            foreach (var selectedItem in selectedItems)
-            {
-                if (selectedItem is TreeViewItemData<string> treeItem)
-                {
-                    Debug.Log($"Selected: {treeItem.data}");
-                }
-            }
-        };
     }
     private void BindButton(string buttonName, System.Action action)
     {
@@ -212,7 +214,13 @@ public class HierarchySpawnerUIToolkit : EditorWindow
 
     private void CreateGameObject(string name, System.Type componentType, System.Action<GameObject> configure = null)
     {
-        var gameobject = new GameObject(name, componentType);
+        // 使用命名規則生成名稱
+        string prefix = prefixField?.value ?? string.Empty;
+        string separator = separatorField?.value ?? string.Empty;
+        string suffix = suffixField?.value ?? string.Empty;
+        string objectName = $"{prefix}{separator}{name}{separator}{suffix}";
+
+        var gameobject = new GameObject(objectName, componentType);
         if (Selection.activeGameObject != null)
         {
             gameobject.transform.SetParent(Selection.activeGameObject.transform);
@@ -220,7 +228,7 @@ public class HierarchySpawnerUIToolkit : EditorWindow
 
         configure?.Invoke(gameobject);
 
-        Undo.RegisterCreatedObjectUndo(gameobject, $"Create {name}");
+        Undo.RegisterCreatedObjectUndo(gameobject, $"Create {objectName}");
         Selection.activeGameObject = gameobject;
     }
 }
