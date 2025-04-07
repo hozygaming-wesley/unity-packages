@@ -5,6 +5,7 @@ using UnityEngine.UIElements; // For UnityEngine.UIElements.Button
 using UnityEditor.UIElements;
 using System.Collections.Generic;
 using TMPro;
+using System.IO;
 
 public class UISpawner : EditorWindow
 {
@@ -173,7 +174,17 @@ public class UISpawner : EditorWindow
                 if (objectField.value is GameObject prefab)
                 {
                     var instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+
+                    // 將生成的 Prefab 放置在當前選擇的 GameObject 底下
+                    if (Selection.activeGameObject != null)
+                    {
+                        instance.transform.SetParent(Selection.activeGameObject.transform);
+                    }
+
                     Undo.RegisterCreatedObjectUndo(instance, "Spawn Prefab");
+
+                    // 選取生成的 Prefab
+                    Selection.activeGameObject = instance;
                 }
             };
 
@@ -201,7 +212,31 @@ public class UISpawner : EditorWindow
             }
         };
 
+        var setDefaultPrefabsButton = new UnityEngine.UIElements.Button(() =>
+        {
+            string prefabPath = "Assets/Modules/HierarchyKit/UISpawner/Resources/Prefab/";
+            string[] prefabFiles = Directory.GetFiles(prefabPath, "*.prefab");
 
+            prefabItems.Clear();
+            foreach (var prefabFile in prefabFiles)
+            {
+                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabFile);
+                if (prefab != null)
+                {
+                    prefabItems.Add(new PrefabItem
+                    {
+                        ButtonText = "+",
+                        Prefab = prefab
+                    });
+                }
+            }
+            prefabListView.Rebuild();
+        })
+        {
+            text = "Set Default Prefabs"
+        };
+
+        root.Q<VisualElement>("PrefabListControls").Add(setDefaultPrefabsButton);
     }
     private void BindButton(string buttonName, System.Action action)
     {

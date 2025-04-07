@@ -1,5 +1,5 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Modules/HierarchyKit/Spawner/Resources/USS/HierarchySpawnerUIToolkit.uss?fileID=7433441132597879392&amp;guid=183516b572a96f9489695786f95e041d&amp;type=3#HierarchySpawnerUIToolkit" />
+    <Style src="project://database/Assets/Modules/HierarchyKit/Spawner/Resources/USS/UISpawner.uss?fileID=7433441132597879392&amp;guid=183516b572a96f9489695786f95e041d&amp;type=3#UISpawner" />
     <engine:VisualElement name="Container" style="flex-grow: 1; justify-content: space-between; align-items: stretch; align-self: stretch; flex-direction: row; flex-wrap: wrap; width: auto; height: auto; padding: 10px; border-radius: 5px;">
         <engine:ScrollView horizontal-scroller-visibility="Auto" style="flex-grow: 1; width: 100%; height: 100%; overflow: scroll; background-color: rgba(56, 56, 56, 0); border: 1px solid rgb(204, 204, 204); border-radius: 5px; padding: 10px; padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0;">
             <engine:Label text="NameRule" name="NameRuleLabel" style="font-size: 14px; font-weight: bold; margin-bottom: 5px; -unity-font-style: bold;" />
