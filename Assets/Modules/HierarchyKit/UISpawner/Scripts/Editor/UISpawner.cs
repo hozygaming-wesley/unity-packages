@@ -6,7 +6,7 @@ using UnityEditor.UIElements;
 using System.Collections.Generic;
 using TMPro;
 using System.IO;
-
+using System.Linq; 
 public class UISpawner : EditorWindow
 {
     const string _uguiPrefab_PackagePath = "Packages/com.untiy.tools.hierarchykit/UISpawner/Resources/Prefab/UGUI/";
@@ -216,14 +216,16 @@ public class UISpawner : EditorWindow
 
         var setDefaultPrefabsButton = new UnityEngine.UIElements.Button(() =>
         {
-            string prefabPath = Directory.Exists("Packages/com.unity.tools.hierarchykit") ? 
-                _uguiPrefab_PackagePath : _uguiPrefab_AssetPath;
+            // 嘗試動態查找 Prefab 資料夾
+            string prefabPath = AssetDatabase.GUIDToAssetPath(AssetDatabase.FindAssets("t:Folder Prefab")
+                .FirstOrDefault(guid => AssetDatabase.GUIDToAssetPath(guid).EndsWith("Prefab")));
 
-            if (!Directory.Exists(prefabPath))
+            if (string.IsNullOrEmpty(prefabPath) || !Directory.Exists(prefabPath))
             {
                 Debug.LogError($"Prefab path does not exist: {prefabPath}");
                 return;
             }
+
             string[] prefabFiles = Directory.GetFiles(prefabPath, "*.prefab");
 
             prefabItems.Clear();
