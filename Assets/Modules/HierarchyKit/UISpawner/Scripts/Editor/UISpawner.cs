@@ -216,9 +216,9 @@ public class UISpawner : EditorWindow
 
         var setDefaultPrefabsButton = new UnityEngine.UIElements.Button(() =>
         {
-            string prefabPath = !Directory.Exists(_uguiPrefab_PackagePath)? 
-                _uguiPrefab_AssetPath : _uguiPrefab_PackagePath;
-                
+            string prefabPath = Directory.Exists("Packages/com.unity.tools.hierarchykit") ? 
+                _uguiPrefab_PackagePath : _uguiPrefab_AssetPath;
+
             if (!Directory.Exists(prefabPath))
             {
                 Debug.LogError($"Prefab path does not exist: {prefabPath}");
