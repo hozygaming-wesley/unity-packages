@@ -9,6 +9,8 @@ using System.IO;
 
 public class UISpawner : EditorWindow
 {
+    const string _uguiPrefab_PackagePath = "Packages/com.untiy.tools.hierarchykit/UISpawner/Resources/Prefab/UGUI/";
+    const string _uguiPrefab_AssetPath = "Assets/Modules/HierarchyKit/UISpawner/Resources/Prefab/";
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
 
@@ -214,22 +216,20 @@ public class UISpawner : EditorWindow
 
         var setDefaultPrefabsButton = new UnityEngine.UIElements.Button(() =>
         {
-            // 使用 Application.dataPath 動態取得 Prefab 資料夾的絕對路徑
-            string prefabPath = Path.Combine(Application.dataPath, "Modules/HierarchyKit/UISpawner/Resources/Prefab/");
+            string prefabPath = !Directory.Exists(_uguiPrefab_PackagePath)? 
+                _uguiPrefab_AssetPath : _uguiPrefab_PackagePath;
+                
             if (!Directory.Exists(prefabPath))
             {
-                Debug.LogError($"Prefab directory not found: {prefabPath}");
+                Debug.LogError($"Prefab path does not exist: {prefabPath}");
                 return;
             }
-
             string[] prefabFiles = Directory.GetFiles(prefabPath, "*.prefab");
 
             prefabItems.Clear();
             foreach (var prefabFile in prefabFiles)
             {
-                // 將絕對路徑轉為相對路徑以載入資源
-                string relativePath = "Assets" + prefabFile.Replace(Application.dataPath, "").Replace("\\", "/");
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(relativePath);
+                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabFile);
                 if (prefab != null)
                 {
                     prefabItems.Add(new PrefabItem
