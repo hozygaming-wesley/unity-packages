@@ -1,0 +1,1100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  m_TargetType:
+    m_NativeTypeID: 687078895
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.anisoLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.compressionQuality
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.maxTextureSize
+    value: 2048
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.textureCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.filterMode
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.generateMipMaps
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.readable
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.crunchedCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.textureSettings.sRGB
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_BuildTarget
+    value: WebGL
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_MaxTextureSize
+    value: 4096
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_ResizeAlgorithm
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_TextureFormat
+    value: 29
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_TextureCompression
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_CompressionQuality
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_CrunchedCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_AllowsAlphaSplitting
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_Overridden
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_IgnorePlatformSupport
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_AndroidETC2FallbackOverride
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[0].m_ForceMaximumCompressionQuality_BC6H_BC7
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_BuildTarget
+    value: DefaultTexturePlatform
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_MaxTextureSize
+    value: 2048
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_ResizeAlgorithm
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_TextureFormat
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_TextureCompression
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_CompressionQuality
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_CrunchedCompression
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_AllowsAlphaSplitting
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_Overridden
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_IgnorePlatformSupport
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_AndroidETC2FallbackOverride
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.platformSettings.Array.data[1].m_ForceMaximumCompressionQuality_BC6H_BC7
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.padding
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.blockOffset
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.allowAlphaSplitting
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.enableRotation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.enableTightPacking
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packingSettings.enableAlphaDilation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.secondaryTextureSettings.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.variantMultiplier
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packables.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.bindAsDefault
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.isAtlasV2
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.cachedData
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.size
+    value: 31
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[0].first.data[0]'
+    value: 52579673
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[0].first.data[1]'
+    value: 1246633779
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[0].first.data[2]'
+    value: 456961935
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[0].first.data[3]'
+    value: 2023242019
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[0].second
+    value: 7121863947544747981
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[1].first.data[0]'
+    value: 128191051
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[1].first.data[1]'
+    value: 1160673662
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[1].first.data[2]'
+    value: 2687597445
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[1].first.data[3]'
+    value: 4024170682
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[1].second
+    value: 7958614781347398402
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[2].first.data[0]'
+    value: 210409957
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[2].first.data[1]'
+    value: 1082219718
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[2].first.data[2]'
+    value: 317703310
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[2].first.data[3]'
+    value: 2618414608
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[2].second
+    value: 3965875412598032112
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[3].first.data[0]'
+    value: 405448162
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[3].first.data[1]'
+    value: 1324521693
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[3].first.data[2]'
+    value: 2241148812
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[3].first.data[3]'
+    value: 4031810142
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[3].second
+    value: 7778999047759117801
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[4].first.data[0]'
+    value: 408052455
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[4].first.data[1]'
+    value: 1119175181
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[4].first.data[2]'
+    value: 3345610909
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[4].first.data[3]'
+    value: 1586952914
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[4].second
+    value: 3312027095932676691
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[5].first.data[0]'
+    value: 481496197
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[5].first.data[1]'
+    value: 1330795131
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[5].first.data[2]'
+    value: 1611075713
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[5].first.data[3]'
+    value: 3678874546
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[5].second
+    value: -3355107021378517832
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[6].first.data[0]'
+    value: 531607647
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[6].first.data[1]'
+    value: 1181610415
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[6].first.data[2]'
+    value: 3589005713
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[6].first.data[3]'
+    value: 303540899
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[6].second
+    value: 8542375544601577567
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[7].first.data[0]'
+    value: 626491457
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[7].first.data[1]'
+    value: 1199054969
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[7].first.data[2]'
+    value: 779261862
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[7].first.data[3]'
+    value: 767448862
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[7].second
+    value: 3940463940578959378
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[8].first.data[0]'
+    value: 1004893380
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[8].first.data[1]'
+    value: 1335244861
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[8].first.data[2]'
+    value: 2610817716
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[8].first.data[3]'
+    value: 3447266499
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[8].second
+    value: 8151341617054410043
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[9].first.data[0]'
+    value: 1061466910
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[9].first.data[1]'
+    value: 1202929719
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[9].first.data[2]'
+    value: 1011743665
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[9].first.data[3]'
+    value: 1811673477
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[9].second
+    value: 597689282919228655
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[10].first.data[0]'
+    value: 1239813323
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[10].first.data[1]'
+    value: 1224922851
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[10].first.data[2]'
+    value: 16572038
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[10].first.data[3]'
+    value: 1531460672
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[10].second
+    value: -13146931353905403
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[11].first.data[0]'
+    value: 1287749652
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[11].first.data[1]'
+    value: 1299970666
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[11].first.data[2]'
+    value: 2947317689
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[11].first.data[3]'
+    value: 1521738935
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[11].second
+    value: -2952992575206698666
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[12].first.data[0]'
+    value: 1370298780
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[12].first.data[1]'
+    value: 1313613724
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[12].first.data[2]'
+    value: 4268802489
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[12].first.data[3]'
+    value: 4256975172
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[12].second
+    value: -5610101794591319133
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[13].first.data[0]'
+    value: 1382560269
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[13].first.data[1]'
+    value: 1156897971
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[13].first.data[2]'
+    value: 3225354421
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[13].first.data[3]'
+    value: 1709439641
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[13].second
+    value: 8091289353042876093
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[14].first.data[0]'
+    value: 1580142264
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[14].first.data[1]'
+    value: 1157088549
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[14].first.data[2]'
+    value: 2433343627
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[14].first.data[3]'
+    value: 3353160820
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[14].second
+    value: 499761292579924581
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[15].first.data[0]'
+    value: 1698821464
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[15].first.data[1]'
+    value: 1249222744
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[15].first.data[2]'
+    value: 1512777107
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[15].first.data[3]'
+    value: 1268146764
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[15].second
+    value: -7910919576045002503
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[16].first.data[0]'
+    value: 1779111519
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[16].first.data[1]'
+    value: 1085343940
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[16].first.data[2]'
+    value: 990090167
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[16].first.data[3]'
+    value: 1812587801
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[16].second
+    value: -3475587073707846372
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[17].first.data[0]'
+    value: 1811433217
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[17].first.data[1]'
+    value: 1193453714
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[17].first.data[2]'
+    value: 4292344717
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[17].first.data[3]'
+    value: 3008348333
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[17].second
+    value: -7419396707303407880
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[18].first.data[0]'
+    value: 1855465983
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[18].first.data[1]'
+    value: 1206654971
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[18].first.data[2]'
+    value: 3945297061
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[18].first.data[3]'
+    value: 2774094583
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[18].second
+    value: 4466381201536574461
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[19].first.data[0]'
+    value: 1893049309
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[19].first.data[1]'
+    value: 1219785529
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[19].first.data[2]'
+    value: 4194107268
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[19].first.data[3]'
+    value: 2298210913
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[19].second
+    value: -4750671292827219458
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[20].first.data[0]'
+    value: 1896281703
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[20].first.data[1]'
+    value: 1340048361
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[20].first.data[2]'
+    value: 1254437522
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[20].first.data[3]'
+    value: 3515509060
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[20].second
+    value: 1617446880585277861
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[21].first.data[0]'
+    value: 2008999169
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[21].first.data[1]'
+    value: 1160212127
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[21].first.data[2]'
+    value: 3072074921
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[21].first.data[3]'
+    value: 205699121
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[21].second
+    value: 5141554033589110531
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[22].first.data[0]'
+    value: 2090946571
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[22].first.data[1]'
+    value: 1296318934
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[22].first.data[2]'
+    value: 2332264614
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[22].first.data[3]'
+    value: 3597841942
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[22].second
+    value: -3382564402881082521
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[23].first.data[0]'
+    value: 2501291600
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[23].first.data[1]'
+    value: 1286449387
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[23].first.data[2]'
+    value: 2728330642
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[23].first.data[3]'
+    value: 22418753
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[23].second
+    value: 101244674369138934
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[24].first.data[0]'
+    value: 2577901337
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[24].first.data[1]'
+    value: 1328238931
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[24].first.data[2]'
+    value: 3581127090
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[24].first.data[3]'
+    value: 162163613
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[24].second
+    value: -6261100316801712201
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[25].first.data[0]'
+    value: 2727611379
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[25].first.data[1]'
+    value: 1324010855
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[25].first.data[2]'
+    value: 3028805505
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[25].first.data[3]'
+    value: 2485616174
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[25].second
+    value: 480569028660145981
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[26].first.data[0]'
+    value: 2882920913
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[26].first.data[1]'
+    value: 1280143835
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[26].first.data[2]'
+    value: 2949072515
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[26].first.data[3]'
+    value: 534867073
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[26].second
+    value: 6224779854499151507
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[27].first.data[0]'
+    value: 2956395911
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[27].first.data[1]'
+    value: 1259351328
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[27].first.data[2]'
+    value: 2254723773
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[27].first.data[3]'
+    value: 2622585051
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[27].second
+    value: -5648041537476493632
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[28].first.data[0]'
+    value: 3271144165
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[28].first.data[1]'
+    value: 1240504842
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[28].first.data[2]'
+    value: 323595650
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[28].first.data[3]'
+    value: 3844630618
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[28].second
+    value: -5166252625731556855
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[29].first.data[0]'
+    value: 3788407822
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[29].first.data[1]'
+    value: 1147625423
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[29].first.data[2]'
+    value: 627775145
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[29].first.data[3]'
+    value: 1183772160
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[29].second
+    value: -2956961310697669879
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[30].first.data[0]'
+    value: 4172208822
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[30].first.data[1]'
+    value: 1148987011
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[30].first.data[2]'
+    value: 269256360
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_EditorData.packedSpriteRenderDataKeys.Array.data[30].first.data[3]'
+    value: 3563481030
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorData.packedSpriteRenderDataKeys.Array.data[30].second
+    value: 9043865555476280872
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MasterAtlas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PackedSprites.Array.size
+    value: 31
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[0]'
+    value: 
+    objectReference: {fileID: 7121863947544747981, guid: 95d4223033f1e4a4f8fac3b132938987, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[1]'
+    value: 
+    objectReference: {fileID: 7958614781347398402, guid: b4a04a70e797e25458b7130aab8fbdfe, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[2]'
+    value: 
+    objectReference: {fileID: 3965875412598032112, guid: 5e99a8c06cc51804e84cfe21016d11c9, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[3]'
+    value: 
+    objectReference: {fileID: 7778999047759117801, guid: 2e5aa281dd892fe4c8735958e5a8050f, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[4]'
+    value: 
+    objectReference: {fileID: 3312027095932676691, guid: 7e262581d0245b24d98f967c2daf69e5, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[5]'
+    value: 
+    objectReference: {fileID: -3355107021378517832, guid: 58c03bc1b72525f4180170062bb274bd, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[6]'
+    value: 
+    objectReference: {fileID: 8542375544601577567, guid: f50bfaf1fa1fd664191ebe5d3aaa7121, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[7]'
+    value: 
+    objectReference: {fileID: 3940463940578959378, guid: 14087552970287746a7927e2e175ebd2, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[8]'
+    value: 
+    objectReference: {fileID: 8151341617054410043, guid: 4c475eb3d38369f44baed9b93cc197dc, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[9]'
+    value: 
+    objectReference: {fileID: 597689282919228655, guid: e13b44f373043b741bbfd4c3581fbfb6, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[10]'
+    value: 
+    objectReference: {fileID: -13146931353905403, guid: bcc06e943e6d209468edcf0004c384b5, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[11]'
+    value: 
+    objectReference: {fileID: -2952992575206698666, guid: 41081cc4a6afb7d49bf7cafa7b4e3ba5, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[12]'
+    value: 
+    objectReference: {fileID: -5610101794591319133, guid: c991da15c972c4e49b1c07ef4494cbdf, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[13]'
+    value: 
+    objectReference: {fileID: 8091289353042876093, guid: d02386253bcd4f445b00f30c99af3e56, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[14]'
+    value: 
+    objectReference: {fileID: 499761292579924581, guid: 8be0f2e5525c7f44b80e901947c2dd7c, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[15]'
+    value: 
+    objectReference: {fileID: -7910919576045002503, guid: 855f1456850a57a43952b2a5c42669b4, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[16]'
+    value: 
+    objectReference: {fileID: -3475587073707846372, guid: f561b0a64c801b047b3930b3915e90c6, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[17]'
+    value: 
+    objectReference: {fileID: -7419396707303407880, guid: 10748fb6298a2274d8bf7dffda0cf43b, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[18]'
+    value: 
+    objectReference: {fileID: 4466381201536574461, guid: ff9289e6bf71ce745a4782be7f25955a, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[19]'
+    value: 
+    objectReference: {fileID: -4750671292827219458, guid: dd3a5d0793374b8448ffcf9f16aebf88, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[20]'
+    value: 
+    objectReference: {fileID: 1617446880585277861, guid: 766f60179e38fdf429235ca44496a81d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[21]'
+    value: 
+    objectReference: {fileID: 5141554033589110531, guid: 105eeb77f9e672549a42c17b138b24c0, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[22]'
+    value: 
+    objectReference: {fileID: -3382564402881082521, guid: b0051ac76d1444d46a8830b8616b276d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[23]'
+    value: 
+    objectReference: {fileID: 101244674369138934, guid: 05ea6159be8adac42950f92a14516510, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[24]'
+    value: 
+    objectReference: {fileID: -6261100316801712201, guid: 917a7a993515b2f42b9a375dd9b6aa90, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[25]'
+    value: 
+    objectReference: {fileID: 480569028660145981, guid: 3fb0492a76dcaee4187e784be2e77249, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[26]'
+    value: 
+    objectReference: {fileID: 6224779854499151507, guid: 1d1e5dbabd17d4c438647cfa18c61ef1, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[27]'
+    value: 
+    objectReference: {fileID: -5648041537476493632, guid: 7850730b02d201b4dba54668bd8715c9, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[28]'
+    value: 
+    objectReference: {fileID: -5166252625731556855, guid: 5e2b9f2ca0a90f9428da9431a586825e, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[29]'
+    value: 
+    objectReference: {fileID: -2956961310697669879, guid: e048ec1efcf576449a61b65200eee864, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSprites.Array.data[30]'
+    value: 
+    objectReference: {fileID: 9043865555476280872, guid: 6badea8f3862c7448a68c0016c76664d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: m_PackedSpriteNamesToIndex.Array.size
+    value: 31
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[0]'
+    value: SlotZone_com_btn_cashin_en_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[1]'
+    value: SlotZone_com_img_above_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[2]'
+    value: SlotZone_con_img_VIP05_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[3]'
+    value: SlotZone_com_btn_cashout_en_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[4]'
+    value: SlotZone_dlg_img_VIP04_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[5]'
+    value: SlotZone_com_btn_head_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[6]'
+    value: SlotZone_lobby_btn_jumnpchest_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[7]'
+    value: SlotZone_lobby_btn_mail_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[8]'
+    value: SlotZone_com_img_gold_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[9]'
+    value: SlotZone_dlg_img_VIP01_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[10]'
+    value: SlotZone_lobby_btn_promotions_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[11]'
+    value: SlotZone_dlg_img_VIP00_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[12]'
+    value: SlotZone_com_btn_setup_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[13]'
+    value: SlotZone_dlg_img_VIP02_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[14]'
+    value: SlotZone_com_btn_cashout_en_click_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[15]'
+    value: SlotZone_con_img_VIP00_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[16]'
+    value: SlotZone_dlg_img_VIP03_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[17]'
+    value: SlotZone_lobby_btn_giftcode_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[18]'
+    value: SlotZone_dlg_btn_re-deposit_M_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[19]'
+    value: SlotZone_con_img_VIP04_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[20]'
+    value: SlotZone_com_btn_buy_frame_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[21]'
+    value: SlotZone_com_btn_sevice_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[22]'
+    value: SlotZone_com_img_btn_BG_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[23]'
+    value: SlotZone_con_img_VIP02_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[24]'
+    value: SlotZone_dlg_btn_giftcode_M_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[25]'
+    value: SlotZone_con_img_VIP03_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[26]'
+    value: SlotZone_lobby_btn_agent_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[27]'
+    value: SlotZone_com_btn_cashin_en_click_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[28]'
+    value: SlotZone_com_btn_search_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[29]'
+    value: SlotZone_con_img_VIP01_small_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_PackedSpriteNamesToIndex.Array.data[30]'
+    value: SlotZone_dlg_img_VIP05_0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RenderDataMap.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Tag
+    value: Atlas
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_IsVariant
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []
