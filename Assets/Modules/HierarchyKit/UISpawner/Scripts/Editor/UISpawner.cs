@@ -177,15 +177,19 @@ public class UISpawner : EditorWindow
                 {
                     var instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
 
-                    // 將生成的 Prefab 放置在當前選擇的 GameObject 底下
+                    // 將生成的 Prefab 轉換為普通 GameObject
+                    PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+
+                    // 將生成的 GameObject 放置在當前選擇的 GameObject 底下
                     if (Selection.activeGameObject != null)
                     {
                         instance.transform.SetParent(Selection.activeGameObject.transform);
+                        instance.transform.localPosition = Vector3.zero; // 將位置設為父物件的正中央
                     }
 
                     Undo.RegisterCreatedObjectUndo(instance, "Spawn Prefab");
 
-                    // 選取生成的 Prefab
+                    // 選取生成的 GameObject
                     Selection.activeGameObject = instance;
                 }
             };
