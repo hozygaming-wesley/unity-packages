@@ -15,6 +15,7 @@ public class UISpawner : EditorWindow
     private VisualTreeAsset m_VisualTreeAsset = default;
 
     private List<PrefabItem> prefabItems = new List<PrefabItem>();
+    private PrefabListData prefabListData;
 
     private class PrefabItem
     {
@@ -35,9 +36,23 @@ public class UISpawner : EditorWindow
 
     public void CreateGUI()
     {
+        if (m_VisualTreeAsset == null)
+        {
+            Debug.LogError("VisualTreeAsset is not assigned. Please assign the UISpawner.uxml file to m_VisualTreeAsset.");
+            return;
+        }
+
         VisualElement root = rootVisualElement;
         VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
         root.Add(labelFromUXML);
+
+        // 確保 PrefabListView 存在
+        var prefabListView = root.Q<ListView>("PrefabListView");
+        if (prefabListView == null)
+        {
+            Debug.LogError("PrefabListView not found in the UI hierarchy. Please check the UXML file.");
+            return;
+        }
 
         // 獲取命名規則的 TextField
         prefixField = root.Q<TextField>("Prefix");
@@ -137,7 +152,6 @@ public class UISpawner : EditorWindow
             });
         });
 
-        var prefabListView = root.Q<ListView>("PrefabListView");
         var addPrefabButton = root.Q<UnityEngine.UIElements.Button>("AddPrefabButton");
         var removePrefabButton = root.Q<UnityEngine.UIElements.Button>("RemovePrefabButton");
 
@@ -280,5 +294,143 @@ public class UISpawner : EditorWindow
 
         Undo.RegisterCreatedObjectUndo(gameobject, $"Create {objectName}");
         Selection.activeGameObject = gameobject;
+    }
+
+    private void SavePrefabListData()
+    {
+        if (prefabListData != null)
+        {
+            EditorUtility.SetDirty(prefabListData);
+            AssetDatabase.SaveAssets();
+        }
+    }
+
+    private void BindDataToListView()
+    {
+        var prefabListView = rootVisualElement.Q<ListView>("PrefabListView");
+
+        if (prefabListView == null)
+        {
+            Debug.LogError("PrefabListView not found in the UI hierarchy. Please check the UXML file.");
+            return;
+        }
+
+        if (prefabListData == null)
+        {
+            Debug.LogError("PrefabListData is null. Ensure it is properly initialized in EnsureConfigExists.");
+            return;
+        }
+
+        // 設定 ListView 的資料來源
+        prefabListView.itemsSource = prefabListData.prefabItems;
+
+        // 設定 ListView 的項目生成邏輯
+        prefabListView.makeItem = () =>
+        {
+            var container = new VisualElement { style = { flexDirection = FlexDirection.Row } };
+            var button = new UnityEngine.UIElements.Button { style = { width = 25, marginRight = 5 } };
+            var objectField = new ObjectField
+            {
+                objectType = typeof(GameObject),
+                style =
+                {
+                    flexGrow = 1,
+                    alignItems = Align.Center,
+                    justifyContent = Justify.Center
+                }
+            };
+            container.Add(button);
+            container.Add(objectField);
+            return container;
+        };
+
+        // 設定 ListView 的項目綁定邏輯
+        prefabListView.bindItem = (element, index) =>
+        {
+            var container = (VisualElement)element;
+            var button = (UnityEngine.UIElements.Button)container.ElementAt(0);
+            var objectField = (ObjectField)container.ElementAt(1);
+
+            var item = prefabListData.prefabItems[index];
+            button.text = item.ButtonText ?? $"Spawn {index + 1}";
+            objectField.value = item.Prefab;
+
+            button.clicked += () =>
+            {
+                if (objectField.value is GameObject prefab)
+                {
+                    var instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+
+                    // 將生成的 Prefab 轉換為普通 GameObject
+                    PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.UserAction);
+
+                    // 將生成的 GameObject 放置在當前選擇的 GameObject 底下
+                    if (Selection.activeGameObject != null)
+                    {
+                        instance.transform.SetParent(Selection.activeGameObject.transform);
+                        instance.transform.localPosition = Vector3.zero;
+                    }
+
+                    Undo.RegisterCreatedObjectUndo(instance, "Spawn Prefab");
+                    Selection.activeGameObject = instance;
+                }
+            };
+
+            objectField.RegisterValueChangedCallback(evt =>
+            {
+                item.Prefab = evt.newValue as GameObject;
+                prefabListData.NotifyDataChanged(); // 通知資料變更
+                SavePrefabListData();
+            });
+        };
+
+        prefabListView.fixedItemHeight = 30;
+
+        // 監聽資料變更
+        prefabListData.OnDataChanged += () =>
+        {
+            prefabListView.Rebuild();
+        };
+    }
+
+    private void AddPrefabItem()
+    {
+        prefabListData.prefabItems.Add(new PrefabListData.PrefabItemData { ButtonText = "+", Prefab = null });
+        prefabListData.NotifyDataChanged();
+        SavePrefabListData();
+    }
+
+    private void RemovePrefabItem()
+    {
+        if (prefabListData.prefabItems.Count > 0)
+        {
+            prefabListData.prefabItems.RemoveAt(prefabListData.prefabItems.Count - 1);
+            prefabListData.NotifyDataChanged();
+            SavePrefabListData();
+        }
+    }
+
+    private void EnsureConfigExists()
+    {
+        const string ConfigAssetPath = "Assets/Modules/HierarchyKit/UISpawner/Resources/PrefabListData.asset";
+
+        // 嘗試加載資產
+        prefabListData = AssetDatabase.LoadAssetAtPath<PrefabListData>(ConfigAssetPath);
+
+        // 如果資產不存在，則創建新的資產
+        if (prefabListData == null)
+        {
+            prefabListData = ScriptableObject.CreateInstance<PrefabListData>();
+            Directory.CreateDirectory(Path.GetDirectoryName(ConfigAssetPath));
+            AssetDatabase.CreateAsset(prefabListData, ConfigAssetPath);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Created new PrefabListData at {ConfigAssetPath}");
+        }
+    }
+
+    private void OnEnable()
+    {
+        EnsureConfigExists();
+        BindDataToListView();
     }
 }
